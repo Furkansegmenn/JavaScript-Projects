@@ -8,7 +8,6 @@
 body {
 	font-family: "Inter", sans-serif;
 	background-color: #f1f1f1;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -31,8 +30,10 @@ body {
 	cursor: pointer;
 	flex: 0.5;
 	margin: 10px;
-
 	transition: flex 0.7s ease-in;
+}
+.panel:hover {
+	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 .panel h3 {
 	font-size: 1.5rem;
