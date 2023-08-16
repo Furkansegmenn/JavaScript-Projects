@@ -49,6 +49,7 @@ body {
 	border: none;
 	font-size: 26px;
 	color: #fff;
+	cursor: pointer;
 }
 
 .circle button:focus {
