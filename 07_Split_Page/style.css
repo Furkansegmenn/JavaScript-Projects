@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+	--left-bg-color: rgba(238, 205, 127, 0.3);
+	--right-bg-color: rgba(240, 153, 31, 0.3);
+	--left-btn-hover-color: rgba(255, 255, 255, 0.6);
+	--right-btn-hover-color: rgba(255, 255, 255, 0.6);
+	--hover-width: 75%;
+	--other-width: 25%;
+	--speed: 1000ms:
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+.split {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 50px;
+	flex: 1;
+	text-align: center;
+	height: 100vh;
+	text-transform: uppercase;
+}
+/* .split:hover h1,
+.split:hover .btn {
+	opacity: 1;
+}
+.split:hover .btn {
+	font-size: 1.3rem;
+}
+.split:hover h1 {
+	font-size: 3.5rem;
+}
+.split .btn-right:hover {
+	background-color: var(--right-btn-hover-color);
+	border: transparent;
+	box-shadow: none;
+	color: blue;
+}
+.split .btn-left:hover {
+	background-color: var(--left-btn-hover-color);
+	border: transparent;
+	box-shadow: none;
+	color: red;
+} */
+
+.left {
+	background: no-repeat center/cover url(images/eren.webp);
+}
+.right {
+	background: no-repeat center/cover url(images/zeke.avif);
+}
+h1 {
+	color: #f00606;
+	font-size: 3rem;
+	opacity: 0.4;
+	text-shadow: 15px 5px 20px #fff;
+	transition: all 0.2s ease-out;
+}
+.right h1 {
+	color: blue;
+}
+.btn {
+	border: 3px solid #fff;
+	width: 200px;
+	align-self: center;
+	border-radius: 40px;
+	padding: 10px;
+	background-color: transparent;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1rem;
+	opacity: 0.1;
+	transition: all 0.2s ease-out;
+	box-shadow: 5px 3px 20px #fff;
+	font-weight: bold;
+}
+
+/* .split.right .btn:hover {
+	background-color: var(--right-btn-hover-color);
+	border-color: transparent;
+}
+.split.left:hover .btn {
+	background-color: var(--left-btn-hover-color);
+	border-color: transparent;
+} */
+.btn:active {
+	transform: scale(0.95);
+}
+
+.hover-left .left { 
+	width : var(--hover-width);
+}
+.hover-left .right {
+	width: var(--other-width);
+}
+
+.hover-right .left {
+	width: var(--other-width);
+}
+.hover-right .right {
+	width: var(--hover-width);
+}
+/* .split .right,
+.split.left {
+	transition: all var(--speed);
+} */
