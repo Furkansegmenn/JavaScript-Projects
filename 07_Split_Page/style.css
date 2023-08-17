@@ -38,7 +38,8 @@ body {
 	height: 100vh;
 	text-transform: uppercase;
 }
-/* .split:hover h1,
+
+.split:hover h1,
 .split:hover .btn {
 	opacity: 1;
 }
@@ -59,7 +60,7 @@ body {
 	border: transparent;
 	box-shadow: none;
 	color: red;
-} */
+}
 
 .left {
 	background: no-repeat center/cover url(images/eren.webp);
@@ -93,14 +94,7 @@ h1 {
 	font-weight: bold;
 }
 
-/* .split.right .btn:hover {
-	background-color: var(--right-btn-hover-color);
-	border-color: transparent;
-}
-.split.left:hover .btn {
-	background-color: var(--left-btn-hover-color);
-	border-color: transparent;
-} */
+
 .btn:active {
 	transform: scale(0.95);
 }
@@ -118,7 +112,8 @@ h1 {
 .hover-right .right {
 	width: var(--hover-width);
 }
-/* .split .right,
+
+.split .right,
 .split.left {
 	transition: all var(--speed);
-} */
+}
