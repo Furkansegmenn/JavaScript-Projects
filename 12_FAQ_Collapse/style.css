@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+
+:root {
+	--orange-color: #f16623;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Rubik", sans-serif;
+	background-color: #f0f0f0;
+}
+
+h1 {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 30px 5px;
+	letter-spacing: 2px;
+}
+.faq-container {
+	max-width: 600px;
+	margin: 0px auto;
+	padding: 10px;
+}
+.faq {
+	background-color: transparent;
+	border: 1px solid #9fa4a8;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 20px 0px;
+	overflow: hidden;
+	transition: 0.3s ease;
+	position: relative;
+}
+.faq.active {
+	background-color: #fff;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+	border: 2px solid var(--orange-color);
+}
+
+.faq.active::before,
+.faq.active::after {
+	content: "\f075";
+	font-family: "Font Awesome 6 Free";
+	color: #52b788;
+	font-size: 7rem;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+	opacity: 0.1;
+}
+.faq.active::before {
+	color: #468faf;
+	top: -10px;
+	left: -30px;
+	transform: rotateY(180deg);
+}
+.faq-title {
+	margin: 0 35px 0 0;
+	transition: 0.3s ease;
+}
+.faq.active .faq-title {
+	color: var(--orange-color);
+}
+
+.faq .text {
+	display: none;
+	margin: 25px 0 0;
+}
+.faq.active .text {
+	display: block;
+}
+
+.faq-toggle {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	transition: 0.3 ease;
+}
+
+.faq.active .faq-toggle {
+	color: var(--orange-color);
+}
+
+.faq-toggle .fa-xmark {
+	display: none;
+}
+.faq.active .faq-toggle .fa-xmark {
+	display: block;
+}
+.faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+}
