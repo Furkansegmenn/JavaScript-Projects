@@ -1,10 +1,12 @@
 const addBtn = document.getElementById("add");
 
-addBtn.addEventListener("click", () => addNewNote());
+addBtn.addEventListener("click", () => addNewNote(""));
 
 function addNewNote(text = "") {
 	const note = document.createElement("div");
 	note.classList.add("note");
+
+	console.log(text);
 
 	note.innerHTML = `
   <img src="images/pin.png" alt="pin">
@@ -13,8 +15,8 @@ function addNewNote(text = "") {
         <button class="delete"><i class="fa-solid fa-eraser"></i></button>
       </div>
 
-      <div class="main ${text ? "" : "hidden"}"></div>
-      <textarea class=" ${text ? "hidden" : ""}"></textarea>
+      <div class="main ${text ? "" : "hidden"}"> ${text}</div>
+      <textarea class=" ${text ? "hidden" : " "}">${text}</textarea>
   `;
 
 	const deleteBtn = note.querySelector(".delete");
@@ -53,8 +55,5 @@ function updateLS() {
 }
 
 const notes = JSON.parse(localStorage.getItem("notes"));
-// console.log(notes)
-
-if (notes) {
-	notes.forEach((note) => addNewNote(note));
-}
+// console.log(notes);
+notes.forEach((note) => addNewNote(note));
